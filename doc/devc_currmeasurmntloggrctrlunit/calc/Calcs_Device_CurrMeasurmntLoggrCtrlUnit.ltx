@@ -1,0 +1,92 @@
+%!TEX TS-program = pdflatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass{article}
+
+\newcommand{\halfquad}{\hspace{0.5em}}
+
+\newcommand{\quarterquad}{\hspace{0.25em}}
+
+\iffalse
+Source Code Comment: fontspec doesn't appear to work for this "LaTeX stack"
+\usepackage{fontspec}
+\fi
+
+\usepackage{textgreek}
+
+\iffalse
+Source Code Comment: This block that I've commented out here was implmented when I was troubleshooting why \textbeta wasn't appearing correctly.
+The issue turned out to be human error: I was using \textBeta and not \textbeta .
+I will comment out these lines of code for now, I don't they are necessary (yet) for the development of this file.
+
+Source Code Comment: fontspec works with LuaLaTeX, but not pdfLaTeX
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\usepackage{gillius2}
+\usepackage{lipsum}
+
+\setmainlanguage{english}
+\setotherlanguage{greek}
+
+\iffalse
+\setmainfont{Hoefler Text}
+\fi
+
+\setmainfont{Arial}
+
+\iffalse
+\setsansfont{Gill Sans}[
+  Scale=MatchLowercase,
+]
+\fi
+\setsansfont{Gillius ADF No2}[
+  Scale=MatchLowercase,
+]
+\setmonofont{Times New Roman}[
+  Scale=MatchLowercase,
+]
+
+\newfontfamily{\greekfont}{GFSDidot}[
+  Extension=.otf,
+  UprightFont=*,
+  ItalicFont=*Italic,
+  BoldFont=*Bold,
+  BoldItalicFont=*BoldItalic,
+  Scale=MatchLowercase,
+]
+\fi
+
+\begin{document}
+
+First document. This is a simple example, now with 
+extra parameters and packages included.
+
+\begin{math}
+1+1=2
+\end{math}
+
+\[ x^n + y^n = z^n \]
+
+\[ \frac{n!}{k!(n-k)!} \]
+
+\[ x_2 \]
+
+\[ \]
+
+Terminology:
+
+Symbols and Abbreviations:
+
+Concepts \& Theory:
+
+Equations:
+
+\[ V = I * R \]
+
+\[ R = \frac {V} { I} \]
+
+Specifications:
+
+\[ V_{OH} \leftarrow 4.2 \quad Volt \]
+
+\end{document}
